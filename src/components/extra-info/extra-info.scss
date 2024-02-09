@@ -1,0 +1,68 @@
+@import '../../sass/variables.scss';
+
+#extra-info-container {
+    width: 100%;
+    height: 210px;
+    border-radius: 16px;
+    background-color: $secondary-color;
+    box-shadow: #00000014 0px 0px 0px;
+    padding: 22px 22px 22px 22px;
+    overflow-x: auto;
+    .title {
+        text-transform: uppercase;
+        color: $secondary-font-color;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        position: sticky;
+        left: 0px;
+    }
+    .info-container {
+        height: calc(100% - 80px);
+        .top-container,
+        .bottom-container {
+            display: flex;
+            align-items: center;
+            height: 50%;
+            gap: $gap-1;
+        }
+        .middle-container {
+            display: flex;
+            height: 1px;
+            margin: 6px 0px;
+            .wrapper {
+                width: 33%;
+            }
+        }
+        .wind-speed-container,
+        .humidity-container,
+        .sunrise-container,
+        .sunset-container {
+            color: $tertiary-font-color;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 600;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: $gap-1;
+            height: 50%;
+            .title {
+                width: fit-content;
+                background-color: $tag-color;
+                padding: 4px 12px;
+                border-radius: 16px;
+                margin: 0px;
+                text-transform: capitalize;
+                position: relative;
+                .icon {
+                    margin-right: 6px;
+                }
+            }
+            .wrapper {
+                text-transform: none;
+            }
+        }
+    }
+}
